@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="packagingAreaViewModel"
+            type="com.example.digitalkitchendemo.packagingArea.PackagingAreaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".packagingAreaOrders.PackagingAreaFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/packaging_queued_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:layout_constraintBottom_toTopOf="@id/packaging_bt_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/move_to_kitchen_bt"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_double_arrow_24"
+            android:rotation="180"
+            app:layout_constraintBottom_toTopOf="@id/packaging_hold_order_list"
+            app:layout_constraintEnd_toStartOf="@id/packaging_bt_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packaging_queued_order_list" />
+
+        <LinearLayout
+            android:id="@+id/packaging_bt_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/packaging_hold_order_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packaging_queued_order_list">
+
+            <Button
+                android:id="@+id/packaging_order_finished_button"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_finished"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/packaging_order_hold_bt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/hold_order"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/packaging_order_finish_hold_bt"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/finish_held_order"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_site"
+            app:layout_constraintBottom_toTopOf="@id/packaging_area_location_spinner"
+            app:layout_constraintStart_toEndOf="@id/packaging_bt_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            />
+
+        <Spinner
+            android:id="@+id/packaging_area_location_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/packaging_hold_order_list"
+            app:layout_constraintEnd_toEndOf="@id/packaging_bt_layout"
+            app:layout_constraintStart_toEndOf="@id/packaging_hold_order_list"
+            app:layout_constraintTop_toBottomOf="@id/packaging_queued_order_list" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/orders_currently_on_hold"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packaging_bt_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/packaging_hold_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/packaging_bt_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

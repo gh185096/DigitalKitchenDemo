@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DigitalKitchenDemo</string>
+    <string name="order">Order #</string>
+    <string name="order_finished">Order Finished</string>
+    <string name="order_type">Order Type:</string>
+    <string name="order_description">Order Description:</string>
+    <string name="hold_order">Hold Order</string>
+    <string name="finish_held_order">Finish Held Order</string>
+    <string name="orders_currently_on_hold">Orders Currently On Hold:</string>
+    <string name="current_site">Current Site:</string>
+
+    <string-array name="siteIds">
+        <item>100</item>
+        <item>0</item>
+        <item>46</item>
+        <item>11</item>
+
+    </string-array>
+
+</resources>

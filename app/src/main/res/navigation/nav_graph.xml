@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/kitchenOrderFragment">
+
+    <fragment
+        android:id="@+id/kitchenOrderFragment"
+        android:name="com.example.digitalkitchendemo.kitchen.KitchenOrdersFragment"
+        android:label="KitchenOrdersFragment"
+        tools:layout="@layout/fragment_kitchen_orders">
+        <action
+            android:id="@+id/action_kitchenOrderFragment_to_packagingAreaFragment"
+            app:destination="@id/packagingAreaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/packagingAreaFragment"
+        android:name="com.example.digitalkitchendemo.packagingArea.PackagingAreaFragment"
+        android:label="PackagingAreaFragment"
+        tools:layout="@layout/fragment_packaging_area">
+        <action
+            android:id="@+id/action_packagingAreaFragment_to_kitchenOrderFragment"
+            app:destination="@id/kitchenOrderFragment" />
+    </fragment>
+
+</navigation>

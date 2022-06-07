@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "629361845748",
+    "project_id": "digitalkitchendemo-daffc",
+    "storage_bucket": "digitalkitchendemo-daffc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629361845748:android:d54a5c2524d8a9891805a1",
+        "android_client_info": {
+          "package_name": "com.example.digitalkitchendemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629361845748-1t4t702o25ut6pbce6mtr2i7vjue97tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCljFlXKs8MWqnL8uc2cWsFXnaHXHSqqaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629361845748-1t4t702o25ut6pbce6mtr2i7vjue97tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629361845748:android:b0c1c9be73a905941805a1",
+        "android_client_info": {
+          "package_name": "com.example.engage_real_time_backend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629361845748-1t4t702o25ut6pbce6mtr2i7vjue97tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCljFlXKs8MWqnL8uc2cWsFXnaHXHSqqaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629361845748-1t4t702o25ut6pbce6mtr2i7vjue97tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
