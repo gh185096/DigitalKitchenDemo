@@ -63,8 +63,8 @@ class PackagingAreaFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     private fun setUpLayoutManagers() {
-        val queuedLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL)
-        val holdLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL)
+        val queuedLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL)
+        val holdLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL)
         binding.packagingQueuedOrderList.layoutManager = queuedLayoutManager
         binding.packagingHoldOrderList.layoutManager = holdLayoutManager
     }

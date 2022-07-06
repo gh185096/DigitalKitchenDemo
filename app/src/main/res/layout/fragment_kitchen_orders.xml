@@ -19,11 +19,12 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/queued_order_list"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            app:layout_constraintBottom_toTopOf="@id/kitchen_bt_layout"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kitchen_bt_layout"
             tools:listitem="@layout/order_layout" />
 
         <TextView
@@ -39,20 +40,27 @@
             android:id="@+id/site_id_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/hold_order_list"
-            app:layout_constraintEnd_toStartOf="@id/kitchen_bt_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/queued_order_list" />
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HERE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/kitchen_bt_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/hold_order_list"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/queued_order_list"
+            app:layout_constraintEnd_toStartOf="@id/move_to_packaging_area_bt"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/queued_order_list">
+            app:layout_constraintTop_toTopOf="parent" >
 
             <Button
                 android:id="@+id/kitchen_order_finished_button"
@@ -87,10 +95,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_baseline_double_arrow_24"
-            app:layout_constraintBottom_toTopOf="@id/hold_order_list"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/kitchen_bt_layout"
-            app:layout_constraintTop_toBottomOf="@id/queued_order_list" />
+            app:layout_constraintBottom_toTopOf="@id/queued_order_list" />
 
         <TextView
             android:layout_width="match_parent"
@@ -103,18 +111,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/kitchen_bt_layout" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/hold_order_list"
-            android:layout_width="match_parent"
-            android:layout_height="210dp"
-            android:layout_marginTop="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kitchen_bt_layout"
-            tools:listitem="@layout/order_layout" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -88,14 +88,14 @@ class KitchenOrdersFragment : Fragment(), AdapterView.OnItemSelectedListener {
         holdOrderAdapter = KitchenOrderAdapter(kitchenOrdersViewModel.heldOrderOptions)
 
         binding.queuedOrderList.adapter = adapter
-        binding.holdOrderList.adapter = holdOrderAdapter
+        //binding.holdOrderList.adapter = holdOrderAdapter
     }
 
     private fun setUpLayoutManagers() {
         val queuedLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL)
         val holdLayoutManager = StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL)
         binding.queuedOrderList.layoutManager = queuedLayoutManager
-        binding.holdOrderList.layoutManager = holdLayoutManager
+        //binding.holdOrderList.layoutManager = holdLayoutManager
     }
 
     private fun setUpViewModel(application: Application) {
